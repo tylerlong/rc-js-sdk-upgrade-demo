@@ -1,9 +1,11 @@
 {
   "license": "MIT",
   "scripts": {
-    "test": "ts-node -r dotenv-override-true/config src/index.ts"
+    "test": "ts-node -r dotenv-override-true/config src/index.ts",
+    "test2": "ts-node -r dotenv-override-true/config src/index2.ts"
   },
   "dependencies": {
+    "@ringcentral/sdk": "^4.7.3",
     "ringcentral": "^3.3.0"
   },
   "devDependencies": {
