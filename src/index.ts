@@ -13,6 +13,7 @@ const main = async () => {
     password: process.env.RINGCENTRAL_PASSWORD,
   });
   const r = await platform.get('/account/~/extension/~');
-  console.log(r.json());
+  const json = r.json();
+  console.log(json);
 };
 main();
