@@ -4,7 +4,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 const config1: Configuration = {
   mode: 'development',
-  entry: './src/oauth/index.ts',
+  entry: './src/oauth/index2.ts',
   plugins: [new HtmlWebpackPlugin()],
 };
 

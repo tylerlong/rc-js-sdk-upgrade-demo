@@ -3,7 +3,8 @@
   "scripts": {
     "test": "ts-node -r dotenv-override-true/config src/index.ts",
     "test2": "ts-node -r dotenv-override-true/config src/index2.ts",
-    "serve": "webpack serve"
+    "serve1": "webpack serve --config src/oauth/webpack.config1.ts",
+    "serve2": "webpack serve --config src/oauth/webpack.config2.ts"
   },
   "dependencies": {
     "@ringcentral/sdk": "^4.7.3",
