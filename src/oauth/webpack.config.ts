@@ -1,6 +1,8 @@
+/* eslint-disable node/no-unpublished-require */
 /* eslint-disable node/no-unpublished-import */
-import {Configuration} from 'webpack';
+import {Configuration, DefinePlugin} from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import dotenv from 'dotenv-override-true';
 
 const config: Configuration = {
   mode: 'development',
@@ -20,7 +22,17 @@ const config: Configuration = {
       filename: 'index2.html',
       chunks: ['index2'],
     }),
+    new DefinePlugin({
+      'process.env': JSON.stringify(dotenv.config().parsed),
+    }),
   ],
+  resolve: {
+    fallback: {
+      querystring: require.resolve('querystring-es3'),
+      crypto: require.resolve('crypto-browserify'),
+      stream: require.resolve('stream-browserify'),
+    },
+  },
 };
 
 export default config;

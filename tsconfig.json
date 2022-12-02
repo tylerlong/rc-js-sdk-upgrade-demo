@@ -6,9 +6,10 @@
       "src/@types",
       "node_modules/@types"
     ],
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "lib": ["DOM"]
   },
   "include": [
     "src/**/*.ts",
-  ]
+  ],
 }

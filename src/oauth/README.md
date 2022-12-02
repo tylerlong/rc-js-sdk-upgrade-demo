@@ -1,10 +1,15 @@
 # How to do OAuth with legacy and new SDK
 
+- source code for OAuth with legacy SDK is located in `oauth/index1.ts`
+- source code for OAuth with new SDK is located in `oauth/index2.ts`
+
+
 ## Run
 
 ```
 yarn serve
 ```
+
 
 ## Test
 
