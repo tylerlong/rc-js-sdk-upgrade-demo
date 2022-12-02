@@ -1,9 +1,12 @@
 import RingCentral from '@ringcentral/sdk';
 import localforage from 'localforage';
 import {createHash, randomBytes} from 'crypto';
-
-import {buffer2string} from './utils';
-
+const buffer2string = (s: Buffer) =>
+  s
+    .toString('base64')
+    .replace(/\+/g, '-')
+    .replace(/\//g, '_')
+    .replace(/=/g, '');
 const redirectUri = window.location.origin + window.location.pathname;
 const rc = new RingCentral({
   server: process.env.RINGCENTRAL_SERVER_URL,
