@@ -13,6 +13,14 @@ const config: Configuration = {
   output: {
     filename: '[name].js',
   },
+  module: {
+    rules: [
+      {
+        test: /\.ts?$/,
+        loader: 'ts-loader',
+      },
+    ],
+  },
   plugins: [
     new HtmlWebpackPlugin({
       filename: 'index1.html',
@@ -27,6 +35,7 @@ const config: Configuration = {
     }),
   ],
   resolve: {
+    extensions: ['.ts', '.js'],
     fallback: {
       querystring: require.resolve('querystring-es3'),
       crypto: require.resolve('crypto-browserify'),

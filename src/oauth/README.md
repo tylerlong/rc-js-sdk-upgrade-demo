@@ -3,6 +3,11 @@
 - source code for OAuth with legacy SDK is located in `oauth/index1.ts`
 - source code for OAuth with new SDK is located in `oauth/index2.ts`
 
+## References:
+
+- https://medium.com/ringcentral-developers/use-authorization-code-pkce-for-ringcentral-api-in-client-app-e9108f04b5f0
+- https://medium.com/ringcentral-developers/a-minimal-project-to-implement-ringcentral-auth-code-flow-in-javascript-bf995d458424
+
 
 ## Run
 
