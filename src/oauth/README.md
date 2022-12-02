@@ -19,4 +19,6 @@ yarn serve
 ## Test
 
 - For legacy SDK, visit http://localhost:8080/index1.html
+  - As I tested, the legacy SDK doesn't support PKCE. So it is OAuth without PKCE.
 - For new SDK, visit http://localhost:8080/index2.html
+  - OAuth + PKCE, so that you don't need to specify client secret.

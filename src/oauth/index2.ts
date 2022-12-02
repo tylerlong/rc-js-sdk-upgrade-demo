@@ -1,22 +1,24 @@
-import SDK from '@ringcentral/sdk';
+import RingCentral from '@ringcentral/sdk';
 import localforage from 'localforage';
 import {createHash, randomBytes} from 'crypto';
 
 import {buffer2string} from './utils';
 
 const redirectUri = window.location.origin + window.location.pathname;
-const rcsdk = new SDK({
+const rc = new RingCentral({
   server: process.env.RINGCENTRAL_SERVER_URL,
   clientId: process.env.RINGCENTRAL_CLIENT_ID,
 });
-const platform = rcsdk.platform();
+const platform = rc.platform();
 const urlSearchParams = new URLSearchParams(
   new URL(window.location.href).search
 );
 const code = urlSearchParams.get('code');
 if (code === null) {
   const codeVerifier = buffer2string(randomBytes(32));
-  localforage.setItem('codeVerifier', codeVerifier); // save codeVerifier in cookies
+  // save codeVerifier in cookies
+  // if you use popup window to avoid current page reloading, you can just save it in memory
+  localforage.setItem('codeVerifier', codeVerifier);
   // login
   const loginUrl = platform.loginUrl({
     redirectUri,
@@ -25,7 +27,6 @@ if (code === null) {
       createHash('sha256').update(codeVerifier).digest()
     ),
   } as any);
-  console.log(loginUrl);
   const link = document.createElement('a');
   link.href = loginUrl;
   link.innerText = 'Login';
