@@ -4,9 +4,11 @@
     "node": ">=14"
   },
   "scripts": {
-    "test": "ts-node -r dotenv-override-true/config src/index.ts",
+    "test1": "ts-node -r dotenv-override-true/config src/index1.ts",
     "test2": "ts-node -r dotenv-override-true/config src/index2.ts",
-    "serve": "webpack serve --config src/oauth/webpack.config.ts"
+    "serve": "webpack serve --config src/oauth/webpack.config.ts",
+    "sub1": "ts-node -r dotenv-override-true/config src/subscription/index1.ts",
+    "sub2": "ts-node -r dotenv-override-true/config src/subscription/index2.ts"
   },
   "dependencies": {
     "@ringcentral/sdk": "^4.7.3",

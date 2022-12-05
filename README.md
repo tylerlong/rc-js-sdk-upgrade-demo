@@ -16,7 +16,7 @@ yarn install
 ### Run the demo for 'ringcentral'
 
 ```
-yarn test
+yarn test1
 ```
 
 ### Run the demo for '@ringcentral/sdk'
@@ -28,3 +28,8 @@ yarn test2
 ## OAuth demo
 
 [Check here](./src/oauth)
+
+
+## Subscription demo
+
+[Check here](./src/subscription)
