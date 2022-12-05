@@ -19,6 +19,9 @@ yarn install
 yarn test1
 ```
 
+Please note that, since subscription is a long running process, the command will not exit by itself.
+
+
 ### Run the demo for '@ringcentral/sdk'
 
 ```
