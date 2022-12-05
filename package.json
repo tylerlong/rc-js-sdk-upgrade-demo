@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@ringcentral/sdk": "^4.7.3",
+    "@ringcentral/subscriptions": "^4.7.3",
     "localforage": "^1.10.0",
     "ringcentral": "^3.3.0"
   },
